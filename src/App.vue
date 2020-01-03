@@ -1,12 +1,16 @@
 <template>
   <v-app>
-    <v-card>
+    
     <v-navigation-drawer
-      expand-on-hover
       permanent
       fixed
+      floating
+      dark
+      overflow
+      clipped
+      app
     >
-      <template v-slot:prepend>
+      <template >
         <v-list>
           <v-list-item>
             <v-list-item-avatar>
@@ -19,8 +23,8 @@
             two-line
           >
             <v-list-item-content>
-              <v-list-item-title class="title">Sandra Adams</v-list-item-title>
-              <v-list-item-subtitle>sandra_a88@gmail.com</v-list-item-subtitle>
+              <v-list-item-title class="title">Cosmos Studio</v-list-item-title>
+              <v-list-item-subtitle>wjstmddnjs991@gmail.com</v-list-item-subtitle>
             </v-list-item-content>
             <v-list-item-action>
               <v-icon>mdi-menu-down</v-icon>
@@ -39,23 +43,27 @@
           <v-list-item-icon>
             <v-icon>mdi-folder</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>My Files</v-list-item-title>
+          <v-list-item-title>My Project</v-list-item-title>
         </v-list-item>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-account-multiple</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Shared with me</v-list-item-title>
-        </v-list-item>
+        
         <v-list-item link>
           <v-list-item-icon>
             <v-icon>mdi-star</v-icon>
           </v-list-item-icon>
           <v-list-item-title>Starred</v-list-item-title>
         </v-list-item>
+
+        <v-list-item link>
+        <v-list-item-icon>
+            <v-icon>mdi-timer</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Timer</v-list-item-title>
+      </v-list-item>
       </v-list>
+
+      
     </v-navigation-drawer>
-  </v-card>
+  
     <v-content>
       <HelloWorld/>
     </v-content>
