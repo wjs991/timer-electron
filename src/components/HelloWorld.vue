@@ -1,40 +1,61 @@
 <template>
- <v-carousel>
-    <v-carousel-item
-      v-for="(color, i) in colors"
-      :key="color"
-    >
-      <v-sheet
-        :color="color"
-        height="100%"
-        tile
+
+  <v-layout row fill-height="" >
+    <v-navigation-drawer permanent>
+    
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="title">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list
+        dense
+        nav
       >
-        <v-row
-          class="fill-height"
-          align="center"
-          justify="center"
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
         >
-          <div class="display-3">Slide {{ i + 1 }}</div>
-        </v-row>
-      </v-sheet>
-    </v-carousel-item>
-  </v-carousel>
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+  
+    </v-navigation-drawer>
+      <Timer/>
+  </v-layout>
   
 </template>
 
 <script>
+import Timer from "./Timer";
 export default {
   name: 'HelloWorld',
-
+  components:{
+    'Timer':Timer,
+  },
  data () {
       return {
-        colors: [
-          'primary',
-          'secondary',
-          'yellow darken-2',
-          'red',
-          'orange',
+        items: [
+          { title: 'Dashboard', icon: 'mdi-view-dashboard' },
+          { title: 'Photos', icon: 'mdi-image' },
+          { title: 'About', icon: 'mdi-help-box' },
         ],
+        right: null,
       }
     },
 };
