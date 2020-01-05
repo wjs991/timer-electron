@@ -1,7 +1,9 @@
 <template>
 
-  <v-layout row fill-height="" >
-    <v-navigation-drawer permanent>
+  <v-layout row fill-height > 
+    <v-navigation-drawer permanent
+      width="200"
+    >
     
       <v-list-item>
         <v-list-item-content>
@@ -36,7 +38,10 @@
       </v-list>
   
     </v-navigation-drawer>
+    <v-responsive :aspect-ratio=" 16/9">
       <Timer/>
+    </v-responsive>
+      
   </v-layout>
   
 </template>

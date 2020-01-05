@@ -4,15 +4,14 @@
       app
       overflow
       permanent
-      floating
-      
+      absolute
       mini-variant
       color="grey lighten-3"
     />
 
     <v-app-bar
       app
-      color="grey darken-2"
+      color="grey lighten-4"
     >
       <v-toolbar-title>Vuetify</v-toolbar-title>
     </v-app-bar>
